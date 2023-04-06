@@ -5,11 +5,20 @@ python3 -m venv venv && source venv/bin/activate && python3 -m pip install --upg
 ```
 
 2. Installation:
-- Install from source: 
+- Git clone repo and install from source: 
 ```
 python3 -m pip install .
 ```
 - Install from github:
 ```
 python3 -m pip install 
+```
+
+3. Verify installation:
+```python
+>>> import numpy as np
+>>> import mymodule
+>>> v = np.arange(15).reshape(3, 5)
+>>> mymodule.wrap_sum_of_sines(v)
+1.2853996391883833
 ```
