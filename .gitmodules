@@ -1,0 +1,15 @@
+[submodule "extern/xtl"]
+	path = extern/xtl
+	url = https://github.com/xtensor-stack/xtl.git
+[submodule "extern/xtensor"]
+	path = extern/xtensor
+	url = https://github.com/xtensor-stack/xtensor.git
+[submodule "extern/xsimd"]
+	path = extern/xsimd
+	url = https://github.com/xtensor-stack/xsimd.git
+[submodule "extern/xtensor-python"]
+	path = extern/xtensor-python
+	url = https://github.com/xtensor-stack/xtensor-python.git
+[submodule "extern/pybind11"]
+	path = extern/pybind11
+	url = https://github.com/pybind/pybind11.git
