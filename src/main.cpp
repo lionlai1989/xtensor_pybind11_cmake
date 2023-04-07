@@ -1,6 +1,6 @@
 #include <numeric>
 #include <pybind11/pybind11.h>
-#include <xtensor/xtensor.hpp>
+#include <xtensor/xmath.hpp>
 #define FORCE_IMPORT_ARRAY
 #include <xtensor-python/pyarray.hpp>
 

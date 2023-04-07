@@ -127,7 +127,7 @@ class CMakeBuild(build_ext):
 setup(
     # Currently, build_ext only provides an optional "highest supported C++
     # level" feature, but in the future it may provide more features.
-    ext_modules=[CMakeExtension("pybind11_template")],
+    ext_modules=[CMakeExtension("mymodule")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
 )
