@@ -20,7 +20,7 @@ python3 -m pip install "mymodule @ git+ssh://git@github.com/lionlai1989/xtensor_
 >>> import numpy as np
 >>> import mymodule
 >>> v = np.arange(15).reshape(3, 5)
->>> mymodule.wrap_sum_of_sines(v)
+>>> mymodule.sum_of_sines(v)
 1.2853996391883833
 ```
 

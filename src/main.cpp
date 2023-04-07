@@ -1,18 +1,16 @@
 #include <numeric>
 #include <pybind11/pybind11.h>
-
+#include <xtensor/xtensor.hpp>
 #define FORCE_IMPORT_ARRAY
 #include <xtensor-python/pyarray.hpp>
 
-#include <mypackage/sum_of_sines.hpp>
-
-double wrap_sum_of_sines(const xt::pyarray<double> &m) {
-  return sum_of_sines(m);
+double sum_of_sines(xt::pyarray<double> &m) {
+  auto sines = xt::sin(m); // sines does not actually hold values.
+  return std::accumulate(sines.begin(), sines.end(), 0.0);
 }
 
 PYBIND11_MODULE(mymodule, m) {
   xt::import_numpy();
   m.doc() = "Test module for xtensor python bindings";
-  m.def("wrap_sum_of_sines", wrap_sum_of_sines,
-        "Sum the sines of the input values");
+  m.def("sum_of_sines", sum_of_sines, "Sum the sines of the input values");
 }
