@@ -24,10 +24,10 @@ python3 -m pip install "mymodule @ git+ssh://git@github.com/lionlai1989/xtensor_
 1.2853996391883833
 ```
 
-4. Link the library `xtensor::use_xsimd` to my target `sum_of_sines_static` in `src/mypackage/CMakeLists.txt`:
-- Comment out Line:5 in `src/mypackage/CMakeLists.txt` and uncomment Line:6:
+4. Link the library `xtensor::use_xsimd` to my target `mymodule` in `CMakeLists.txt`:
+- Uncomment Line:44 in `CMakeLists.txt`:
 ```
-target_link_libraries(sum_of_sines_static PUBLIC xtensor xtensor::optimize xtensor::use_xsimd)
+target_link_libraries(mymodule PUBLIC xtensor pybind11::module xtensor-python Python::NumPy xtensor::optimize xtensor::use_xsimd)
 ```
 - The error when `python3 -m pip install .`:
 ```
